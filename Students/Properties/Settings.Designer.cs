@@ -26,7 +26,8 @@ namespace Students.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=127.0.0.1;Database=studentsdb_1;User Id=sa;Password=123;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=students;Integrated Security=S" +
+            "SPI")]
         public string studentsConn {
             get {
                 return ((string)(this["studentsConn"]));

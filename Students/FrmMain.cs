@@ -23,7 +23,7 @@ namespace Students
         {
             _studentInitializer.Change += OnChange;
 
-            await _studentInitializer.CreateDatabaseAsync();
+            // await _studentInitializer.CreateDatabaseAsync();
             await _studentInitializer.InsertTestDataAsync();
         }
 

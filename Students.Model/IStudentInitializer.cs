@@ -7,7 +7,7 @@ namespace Students.Model
     public interface IStudentInitializer
     {
         event ChangeEventHandler Change;
-        Task CreateDatabaseAsync();
+        // Task CreateDatabaseAsync();
         Task InsertTestDataAsync();
     }
 }

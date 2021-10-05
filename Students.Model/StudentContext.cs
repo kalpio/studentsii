@@ -1,21 +1,19 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Students.Model.Entities;
 
 namespace Students.Model
 {
     public class StudentContext : DbContext
     {
-        private readonly IContextInitializer _contextInitializer;
         public StudentContext()
         {
-            _contextInitializer = Services.Services.ServiceProvider.GetService<IContextInitializer>();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_contextInitializer.GetConnectionString());
+            optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["Students.Properties.Settings.studentsConn"].ConnectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

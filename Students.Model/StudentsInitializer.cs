@@ -28,21 +28,21 @@ namespace Students.Model
             _logger = LogManager.GetCurrentClassLogger();
         }
 
-        public async Task CreateDatabaseAsync()
-        {
-            try
-            {
-                await using var db = new StudentContext();
-                OnChange("Checking database...");
-                var existing = await db.Database.EnsureCreatedAsync();
-                OnChange(existing ? "Database created!" : "Database already existed!");
-            }
-            catch (Exception e)
-            {
-                _logger.Error(e, "Create database with tables");
-                OnChange("Error during create database. Please check log file for more information.");
-            }
-        }
+        // public async Task CreateDatabaseAsync()
+        // {
+        //     try
+        //     {
+        //         await using var db = new StudentContext();
+        //         OnChange("Checking database...");
+        //         var existing = await db.Database.EnsureCreatedAsync();
+        //         OnChange(existing ? "Database created!" : "Database already existed!");
+        //     }
+        //     catch (Exception e)
+        //     {
+        //         _logger.Error(e, "Create database with tables");
+        //         OnChange("Error during create database. Please check log file for more information.");
+        //     }
+        // }
 
         public async Task InsertTestDataAsync()
         {

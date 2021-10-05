@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Identity.Client;
-using Students.Model;
 
 namespace Students
 {
